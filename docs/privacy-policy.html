@@ -38,7 +38,9 @@
   </ul>
 
   <h2>Data Storage</h2>
-  <p><strong>All data is stored locally on your device</strong> using Chrome's built-in storage API (<code>chrome.storage.local</code>). We do not send data to external servers, use cloud storage, or share data with third parties.</p>
+  <p><strong>All browsing/time data is stored locally on your device</strong> using Chrome's built-in storage API (<code>chrome.storage.local</code>). We do not send your browsing/time data to external servers, use cloud storage, or share browsing/time data with third parties.</p>
+
+  <p><strong>License check:</strong> We call Google's Chrome Web Store licensing API using <code>chrome.identity</code> to verify your license. This sends a Google auth token to Google only for license validation. No browsing/time data is included in that request.</p>
 
   <h2>Data Retention</h2>
   <ul>
@@ -55,6 +57,7 @@
     <li><strong>idle</strong>: Detects when you're away from your computer to pause time tracking automatically.</li>
     <li><strong>alarms</strong>: Runs periodic tasks like saving data and sending notifications.</li>
     <li><strong>notifications</strong>: Shows alerts for goals, achievements, and daily summaries.</li>
+    <li><strong>identity</strong>: Used solely to obtain a Google auth token for Chrome Web Store license verification. No browsing/time data is sent with this token.</li>
     <li><strong>host_permissions (&lt;all_urls&gt;)</strong>: Required to track time across all websites. No data is sent externally - this permission only enables local tracking.</li>
   </ul>
 
